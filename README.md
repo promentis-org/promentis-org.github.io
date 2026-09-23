@@ -1,9 +1,24 @@
 # Promentis website
 
-Static landing page for Promentis Inc. The site source is `index.html`; there is no build step or external dependency.
+Landing page for Promentis Inc. The site source is `index.html` and the contact endpoint is a Cloudflare Pages Function in `functions/api/contact.js`. There is no build step or package dependency.
 
 ## Cloudflare Pages
 
-Connect this repository to a Cloudflare Pages project. Use the `main` branch for production, leave the build command blank, and use the repository root (`.`) as the output directory. Add `promentis.org` and `www.promentis.org` as custom domains after checking the Pages preview.
+The `promentis` Pages project deploys the `main` branch. Leave the build command blank and use the repository root (`.`) as the output directory. `promentis.org` and `www.promentis.org` are connected as custom domains.
 
-The `CNAME` file remains for the current GitHub Pages deployment until the hosting migration is complete.
+## Contact form
+
+The form stores business inquiries in the Cloudflare D1 database `promentis-contact`. Create its `contact_messages` table with `schema.sql` if setting up a fresh environment. In Pages **Settings → Bindings**, bind that database as `CONTACT_DB`. In **Settings → Variables and secrets**, add the Turnstile widget's secret key as an encrypted secret named `TURNSTILE_SECRET`. Configure both for production and for any preview environment used to test submissions. Redeploy after changing bindings or secrets.
+
+The public Turnstile site key is in `index.html`; the private key belongs only in Cloudflare's encrypted secret. Allowed Turnstile hostnames must include the site's hostname and any preview hostname used for tests.
+
+Review messages in Cloudflare **Storage & databases → D1 → promentis-contact → Console** with:
+
+```sql
+SELECT created_at, name, email, message, status
+FROM contact_messages
+ORDER BY created_at DESC
+LIMIT 50;
+```
+
+The form does not email or notify the team. Check D1 regularly for new inquiries. Visitors are asked to avoid including personal health information.
