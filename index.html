@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2130">
+  <meta name="description" content="Promentis Inc is developing AI-enabled and biofeedback technologies for mental and behavioral health.">
+  <title>Promentis | Mental Health Technology</title>
+  <style>
+    :root { color-scheme: light; --navy:#0b2130; --ink:#173343; --muted:#526875; --teal:#0a9a9b; --pale:#e9f5f3; --line:#d9e6e6; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Arial,sans-serif; color:var(--ink); background:#fbfdfd; line-height:1.6; }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .skip { position:absolute; left:-9999px; top:12px; padding:8px 12px; background:#fff; z-index:10; }
+    .skip:focus { left:12px; }
+    header { background:var(--navy); color:#fff; }
+    nav { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-size:1.24rem; font-weight:800; letter-spacing:.08em; text-decoration:none; }
+    .navlinks { display:flex; flex-wrap:wrap; gap:26px; align-items:center; }
+    .navlinks a { font-size:.92rem; text-decoration:none; color:#dceced; }
+    .navlinks a:hover,.navlinks a:focus-visible { color:#fff; text-decoration:underline; text-underline-offset:5px; }
+    .hero { background:radial-gradient(circle at 82% 32%,#21566a 0,#0b2130 43%,#071822 100%); color:#fff; overflow:hidden; }
+    .hero-inner { min-height:570px; display:grid; grid-template-columns:1.35fr .65fr; align-items:center; gap:30px; padding:74px 0 88px; }
+    .eyebrow { color:#75dcda; font-size:.82rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { max-width:760px; margin-bottom:22px; font-size:clamp(2.7rem,6vw,5.2rem); line-height:1.06; letter-spacing:-.055em; }
+    .hero p { max-width:640px; font-size:1.13rem; color:#cce0e4; }
+    .buttons { display:flex; flex-wrap:wrap; gap:13px; margin-top:31px; }
+    .button { display:inline-block; padding:13px 19px; border-radius:6px; font-weight:700; text-decoration:none; background:#60d1cd; color:#08212b; transition:transform .15s,background .15s; }
+    .button:hover,.button:focus-visible { transform:translateY(-2px); background:#86e5e1; }
+    .button-outline { border:1px solid #78969f; background:transparent; color:#fff; }
+    .button-outline:hover,.button-outline:focus-visible { background:#1b4250; }
+    .art { position:relative; width:min(310px,75vw); aspect-ratio:1; margin:auto; border:1px solid #5b9ca5; border-radius:50%; box-shadow:0 0 0 35px #ffffff08,0 0 0 90px #ffffff05; }
+    .art:before,.art:after { content:""; position:absolute; border-radius:50%; }
+    .art:before { inset:21%; border:24px solid #64d2cf; border-left-color:transparent; transform:rotate(-35deg); }
+    .art:after { width:28%; aspect-ratio:1; left:36%; top:36%; background:#f6fbfb; box-shadow:0 0 0 10px #2c7681; }
+    section { padding:84px 0; }
+    .section-head { max-width:690px; margin-bottom:34px; }
+    h2 { font-size:clamp(2rem,3.7vw,3.15rem); line-height:1.15; letter-spacing:-.04em; margin-bottom:16px; }
+    .section-head p,.lead { font-size:1.07rem; color:var(--muted); }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { padding:27px 25px; background:#fff; border:1px solid var(--line); border-radius:10px; box-shadow:0 13px 35px #0b213009; }
+    .number { color:var(--teal); font-weight:800; font-size:.86rem; letter-spacing:.1em; }
+    h3 { font-size:1.27rem; line-height:1.25; margin:15px 0 12px; }
+    .card p { color:var(--muted); margin-bottom:0; }
+    .about { background:var(--pale); }
+    .about-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:65px; align-items:start; }
+    .about p { color:#3d5964; }
+    .about-note { padding:29px; background:#fff; border-left:4px solid var(--teal); border-radius:0 8px 8px 0; font-size:1.18rem; line-height:1.5; }
+    .contact { background:var(--navy); color:#fff; }
+    .contact-grid { display:flex; justify-content:space-between; align-items:center; gap:35px; }
+    .contact p { color:#cce0e4; max-width:640px; }
+    footer { background:#071822; color:#aac2c8; padding:25px 0; font-size:.88rem; }
+    footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
+    :focus-visible { outline:3px solid #60d1cd; outline-offset:4px; }
+    @media(max-width:760px) { .hero-inner,.about-grid { grid-template-columns:1fr; } .hero-inner { min-height:0; padding:68px 0; } .art { display:none; } .cards { grid-template-columns:1fr; } .contact-grid { align-items:start; flex-direction:column; } section { padding:64px 0; } }
+    @media(max-width:480px) { nav { align-items:flex-start; flex-direction:column; padding:20px 0; gap:12px; } .navlinks { gap:18px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#top">PROMENTIS</a>
+      <div class="navlinks"><a href="#technology">Technology</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="hero" id="top"><div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Mental health technology in development</div>
+        <h1>Building technology for better mental health care.</h1>
+        <p>Promentis is developing AI-enabled and biofeedback technologies informed by experience in psychiatry, software, and medical device development.</p>
+        <div class="buttons"><a class="button" href="#contact">Connect with us</a><a class="button button-outline" href="#technology">Explore our focus</a></div>
+      </div>
+      <div class="art" aria-hidden="true"></div>
+    </div></div>
+    <section id="technology"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Our technology focus</div><h2>Clinical insight meets technical development.</h2><p>We are exploring tools that could make behavioral health information more useful and care experiences more responsive. These initiatives are in development.</p></div>
+      <div class="cards">
+        <article class="card"><div class="number">01 / AI</div><h3>AI for behavioral health</h3><p>Investigating ways to turn complex information into useful insights for mental and behavioral health workflows.</p></article>
+        <article class="card"><div class="number">02 / BIOFEEDBACK</div><h3>Biofeedback technology</h3><p>Exploring device concepts that connect physiological signals with more personalized, informed experiences.</p></article>
+        <article class="card"><div class="number">03 / DIGITAL HEALTH</div><h3>Digital experiences</h3><p>Designing software concepts that can make mental health tools more accessible and easier to use.</p></article>
+      </div>
+    </div></section>
+    <section class="about" id="about"><div class="wrap about-grid">
+      <div><div class="eyebrow">About Promentis</div><h2>Built at the intersection of health and technology.</h2></div>
+      <div><p class="lead">Promentis Inc is an early-stage company focused on developing technology for mental and behavioral health. Our team brings together experience in psychiatry, software engineering, device development, and pharmaceuticals.</p><div class="about-note">Our aim is to develop tools that address real needs in mental health care.</div></div>
+    </div></section>
+    <section class="contact" id="contact"><div class="wrap contact-grid">
+      <div><div class="eyebrow">Get in touch</div><h2>Let's build what comes next.</h2><p>Interested in Promentis, our technology direction, or potential collaboration? We would be glad to hear from you.</p></div>
+      <a class="button" href="mailto:hello@promentis.org">Email hello@promentis.org</a>
+    </div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Promentis Inc</span><span>Mental health technology</span></div></footer>
+</body>
+</html>
