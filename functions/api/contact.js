@@ -13,7 +13,7 @@ function reply(request, status, message) {
     return Response.redirect(new URL('/contact-success.html', request.url), 303);
   }
 
-  const html = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Message not sent | Promentis</title><main style="font:1.1rem/1.6 Arial,sans-serif;max-width:40rem;margin:10vh auto;padding:1rem"><h1>Message not sent</h1><p>${message}</p><p><a href="/#contact">Return to the contact form</a></p></main>`;
+  const html = `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Message not sent | Promentis</title><main style="font:1.1rem/1.6 Arial,sans-serif;max-width:40rem;margin:10vh auto;padding:1rem"><h1>Message not sent</h1><p>${message}</p><p><a href="/contact">Return to the contact form</a></p></main>`;
   return new Response(html, {
     status,
     headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' }

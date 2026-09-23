@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b2130">
-  <meta name="description" content="Promentis Inc is developing AI-enabled and biofeedback technologies for mental and behavioral health.">
-  <title>Promentis | AI &amp; Biofeedback for Behavioral Health</title>
+  <meta name="description" content="Contact Promentis Inc about our AI and biofeedback technology direction or potential collaboration.">
+  <title>Contact | Promentis Inc</title>
   <style>
     :root { color-scheme: light; --navy:#0b2130; --ink:#173343; --muted:#526875; --teal:#0a9a9b; --pale:#e9f5f3; --line:#d9e6e6; }
     * { box-sizing:border-box; }
@@ -49,9 +49,20 @@
     .about-grid { display:grid; grid-template-columns:.95fr 1.05fr; gap:65px; align-items:start; }
     .about p { color:#3d5964; }
     .about-note { padding:29px; background:#fff; border-left:4px solid var(--teal); border-radius:0 8px 8px 0; font-size:1.18rem; line-height:1.5; }
-    .contact { background:var(--navy); color:#fff; }
-    .contact-grid { display:grid; grid-template-columns:1fr auto; align-items:center; gap:60px; }
+    .contact { background:var(--navy); color:#fff; min-height:calc(100vh - 165px); }
+    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; align-items:start; gap:60px; }
     .contact p { color:#cce0e4; max-width:640px; }
+    .contact-form { padding:30px; background:#fff; color:var(--ink); border-radius:10px; }
+    .contact-form label { display:block; margin-bottom:17px; font-weight:700; }
+    .contact-form input,.contact-form textarea { display:block; width:100%; margin-top:6px; padding:11px 12px; border:1px solid #9fb5bc; border-radius:5px; color:var(--ink); background:#fff; font:inherit; }
+    .contact-form textarea { min-height:145px; resize:vertical; }
+    .contact-form button { border:0; cursor:pointer; font:inherit; }
+    .contact-form .form-note { margin:0 0 18px; color:var(--muted); font-size:.89rem; }
+    .contact-form .form-status { margin:16px 0 0; color:var(--ink); font-weight:700; }
+    .contact-form .form-status[data-state="error"] { color:#a12222; }
+    .contact-form .cf-turnstile { margin:0 0 18px; }
+    .contact-form button:disabled { opacity:.6; cursor:wait; }
+    .form-trap { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
     footer { background:#071822; color:#aac2c8; padding:25px 0; font-size:.88rem; }
     footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; }
     :focus-visible { outline:3px solid #60d1cd; outline-offset:4px; }
@@ -59,42 +70,60 @@
     @media(max-width:480px) { nav { align-items:flex-start; flex-direction:column; padding:20px 0; gap:12px; } .navlinks { gap:18px; } }
     @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
   </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header>
     <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#top"><span class="brand-mark"><img src="assets/promentis-logo-no-circle.png" alt=""></span><span>PROMENTIS INC</span></a>
-      <div class="navlinks"><a href="#technology">Technology</a><a href="#about">About</a><a href="/contact">Contact</a></div>
+      <a class="brand" href="/"><span class="brand-mark"><img src="/assets/promentis-logo-no-circle.png" alt=""></span><span>PROMENTIS INC</span></a>
+      <div class="navlinks"><a href="/#technology">Technology</a><a href="/#about">About</a><a href="/contact" aria-current="page">Contact</a></div>
     </nav>
   </header>
   <main id="main">
-    <div class="hero" id="top"><div class="wrap hero-inner">
-      <div>
-        <div class="eyebrow">AI and biofeedback in development</div>
-        <h1>Building technology for better mental health care.</h1>
-        <p>Promentis is developing AI-enabled and biofeedback technologies informed by experience in psychiatry, software, and medical device development.</p>
-        <div class="buttons"><a class="button" href="/contact">Connect with us</a><a class="button button-outline" href="#technology">Explore our focus</a></div>
-      </div>
-      <div class="hero-logo"><img src="assets/promentis-logo-no-circle.png" alt="Promentis logo: a human profile formed by connected circles"></div>
-    </div></div>
-    <section id="technology"><div class="wrap">
-      <div class="section-head"><div class="eyebrow">Our technology focus</div><h2>Clinical insight meets technical development.</h2><p>We are exploring tools that could make behavioral health information more useful and care experiences more responsive. These initiatives are in development.</p></div>
-      <div class="cards">
-        <article class="card"><div class="number">01 / AI</div><h3>AI for behavioral health</h3><p>Investigating ways to turn complex information into useful insights for mental and behavioral health workflows.</p></article>
-        <article class="card"><div class="number">02 / BIOFEEDBACK</div><h3>Biofeedback technology</h3><p>Exploring device concepts that connect physiological signals with more personalized, informed experiences.</p></article>
-        <article class="card"><div class="number">03 / DIGITAL HEALTH</div><h3>Digital experiences</h3><p>Designing software concepts that can make mental health tools more accessible and easier to use.</p></article>
-      </div>
-    </div></section>
-    <section class="about" id="about"><div class="wrap about-grid">
-      <div><div class="eyebrow">About Promentis</div><h2>Built at the intersection of health and technology.</h2></div>
-      <div><p class="lead">Promentis Inc is an early-stage company focused on developing technology for mental and behavioral health. Our team brings together experience in psychiatry, software engineering, device development, and pharmaceuticals.</p><div class="about-note">Our aim is to develop tools that address real needs in mental health care.</div></div>
-    </div></section>
     <section class="contact" id="contact"><div class="wrap contact-grid">
       <div><div class="eyebrow">Get in touch</div><h2>Let's build what comes next.</h2><p>Interested in Promentis, our technology direction, or potential collaboration? We would be glad to hear from you.</p></div>
-      <a class="button" href="/contact">Contact us</a>
+      <form class="contact-form" action="/api/contact" method="post">
+        <label for="contact-name">Name<input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required></label>
+        <label for="contact-email">Email<input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required></label>
+        <label for="contact-message">Message<textarea id="contact-message" name="message" maxlength="5000" required></textarea></label>
+        <div class="form-trap" aria-hidden="true"><label for="contact-website">Website<input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <p class="form-note">For business inquiries. Please do not include personal health information.</p>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFBbR3CrgqFnMI3o"></div>
+        <button class="button" type="submit">Send message</button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
     </div></section>
   </main>
   <footer><div class="wrap"><span>© 2026 Promentis Inc</span><span>Where clinical insight inspires intelligent technology.</span></div></footer>
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+    const contactStatus = contactForm.querySelector('.form-status');
+    const contactButton = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      contactButton.disabled = true;
+      contactStatus.hidden = false;
+      contactStatus.dataset.state = '';
+      contactStatus.textContent = 'Sending your message…';
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'Unable to send your message. Please try again.');
+        contactForm.reset();
+        contactStatus.textContent = 'Thank you. Your message has been received.';
+      } catch (error) {
+        contactStatus.dataset.state = 'error';
+        contactStatus.textContent = error.message || 'Unable to send your message. Please try again.';
+      } finally {
+        window.turnstile?.reset();
+        contactButton.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
